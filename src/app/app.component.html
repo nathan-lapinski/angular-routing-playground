@@ -8,5 +8,5 @@
 </mat-menu>
 <h1>Angular 6 Routing App!!</h1>
 <button (click)="onClick()">Return to Welcome Page</button>
-<router-outlet></router-outlet>
+<router-outlet (activate)="onRouterOutletActivate()" (deactivate)="onRouterOutletDeactivate()"></router-outlet>
 

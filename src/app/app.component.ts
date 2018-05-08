@@ -15,4 +15,13 @@ export class AppComponent {
   onClick(): void {
     this.router.navigate([this.welcomUrl]);
   }
+
+  // debug purposed
+  onRouterOutletActivate(v) {
+    console.log('Router Outlet Activate: ', v);
+  }
+
+  onRouterOutletDeactivate(v) {
+    console.log('Router Outlet Activate: ', v);
+  }
 }
