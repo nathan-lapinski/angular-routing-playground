@@ -1,7 +1,10 @@
-<button mat-button [matMenuTriggerFor]="menu">Menu</button>
+<button mat-button [matMenuTriggerFor]="menu">Routing</button>
 <mat-menu #menu="matMenu">
-  <button mat-menu-item>Item 1</button>
-  <button mat-menu-item>Item 2</button>
+  <button mat-menu-item><a [routerLink]="['/welcome']">Welcome</a></button>
+  <button mat-menu-item><a [routerLink]="['/view1']">View 1</a></button>
+  <button mat-menu-item><a [routerLink]="['/view2']">View 2</a></button>
+  <button mat-menu-item><a [routerLink]="['/view3']">View 3</a></button>
 </mat-menu>
-<h1>Angular 6!!</h1>
+<h1>Angular 6 Routing App!!</h1>
+<router-outlet></router-outlet>
 
