@@ -16,7 +16,7 @@ const ROUTES = [
     { path: '**', component: PageNotFoundComponent }
 ];
 @NgModule({
-    imports: [ RouterModule.forRoot(ROUTES),
+    imports: [ RouterModule.forRoot(ROUTES, { enableTracing: true }),
     ],
     exports: [ RouterModule ]
 })
