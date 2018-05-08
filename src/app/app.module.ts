@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import { MatMenuModule } from '@angular/material/menu';
-import { RouterModule } from '@angular/router';
+import { AppRoutingModule } from './app-routing.module';
 
 import { FeatureOneModule } from './feature-one/feature-one.module';
 
@@ -25,15 +25,9 @@ import { WelcomeComponent } from './welcome/welcome.component';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    RouterModule.forRoot([
-      { path: 'welcome', component: WelcomeComponent },
-      { path: '', redirectTo: 'welcome', pathMatch: 'full'},
-      { path: 'view1', component: ComponentViewOneComponent },
-      { path: 'view2', component: ComponentViewTwoComponent },
-      { path: 'view3', component: ComponentViewThreeComponent },
-      { path: '**', component: PageNotFoundComponent }]),
     MatMenuModule,
     FeatureOneModule,
+    AppRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
