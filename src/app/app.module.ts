@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import { MatMenuModule } from '@angular/material/menu';
 import { RouterModule } from '@angular/router';
 
+import { FeatureOneModule } from './feature-one/feature-one.module';
 
 import { AppComponent } from './app.component';
 import { ComponentViewOneComponent } from './component-view-one/component-view-one.component';
@@ -32,6 +33,7 @@ import { WelcomeComponent } from './welcome/welcome.component';
       { path: 'view3', component: ComponentViewThreeComponent },
       { path: '**', component: PageNotFoundComponent }]),
     MatMenuModule,
+    FeatureOneModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
