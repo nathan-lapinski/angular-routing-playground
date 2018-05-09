@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-component-view-two',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ComponentViewTwoComponent implements OnInit {
 
-  constructor() { }
+  public val1;
+  public val2;
+
+  constructor(private route: ActivatedRoute) { }
 
   ngOnInit() {
+    this.val1 = this.route.snapshot.params['optional1'];
+    this.val2 = this.route.snapshot.params['optional2'];
   }
 
 }

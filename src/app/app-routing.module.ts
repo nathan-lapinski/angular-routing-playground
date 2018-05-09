@@ -12,7 +12,7 @@ const ROUTES = [
     { path: '', redirectTo: 'welcome', pathMatch: 'full'},
     { path: 'view1', component: ComponentViewOneComponent },
     { path: 'view2', component: ComponentViewTwoComponent },
-    { path: 'view3', component: ComponentViewThreeComponent },
+    { path: 'view3/:id', component: ComponentViewThreeComponent },
     { path: '**', component: PageNotFoundComponent }
 ];
 @NgModule({

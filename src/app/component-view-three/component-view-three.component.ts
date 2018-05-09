@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-component-view-three',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ComponentViewThreeComponent implements OnInit {
 
-  constructor() { }
+  public id;
+
+  constructor(private route: ActivatedRoute) { }
 
   ngOnInit() {
+    this.route.params.subscribe(params => this.id = params['id']);
   }
 
 }
