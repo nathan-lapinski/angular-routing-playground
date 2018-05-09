@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { MatMenuModule } from '@angular/material/menu';
 import { AppRoutingModule } from './app-routing.module';
@@ -12,6 +13,7 @@ import { ComponentViewTwoComponent } from './component-view-two/component-view-t
 import { ComponentViewThreeComponent } from './component-view-three/component-view-three.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { WelcomeComponent } from './welcome/welcome.component';
+import { GithubUsersModule } from './github-users/github-users.module';
 
 @NgModule({
   declarations: [
@@ -25,8 +27,10 @@ import { WelcomeComponent } from './welcome/welcome.component';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
+    HttpClientModule,
     MatMenuModule,
     FeatureOneModule,
+    GithubUsersModule,
     AppRoutingModule,
   ],
   providers: [],
